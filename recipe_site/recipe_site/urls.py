@@ -17,10 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from cookapp.views import CategoryListView, RecipeByCategoryView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CategoryListView.as_view(), name='category-list'),
-    path('<str:slug>/', RecipeByCategoryView.as_view(), name='recipe-by-category'),
+
 ]
