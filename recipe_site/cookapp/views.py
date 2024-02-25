@@ -17,6 +17,11 @@ from django.views.generic import ListView
 from .models import Recipe, Category
 from .forms import UserRegistrationForm
 
+
+def index(request):
+    return render(request,'base.html')
+
+
 class CategoryListView(ListView):
     model = Category
     template_name = "category_list.html"
@@ -36,8 +41,10 @@ class RecipeByCategoryView(ListView):
         context['title'] = self.category
         return context
 
+
 def login_user(request):
-    return render(request,'login.html')
+    return render(request, 'login.html')
+
 
 def register(request):
     if request.method == 'POST':
