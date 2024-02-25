@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<h1 class="alert-heading"> Приветствуем Вас на сайте, где можно брать идеи для новых блюд и делиться своими!</h1>
+    {% block categories_list %}
+        {% include 'category_list.html' %}
+    {% endblock %}
+{% endblock %}
